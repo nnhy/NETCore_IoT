@@ -2,13 +2,16 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.1;net461</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net45</TargetFrameworks>
     <OutputPath>..\Bin\SerialTest</OutputPath>
     <!--<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>-->
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="NewLife.Core" Version="8.7.2020.601" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
     <PackageReference Include="System.IO.Ports" Version="4.7.0" />
   </ItemGroup>
 

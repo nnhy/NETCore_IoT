@@ -1,4 +1,6 @@
-﻿using NewLife.Log;
+﻿using NewLife;
+using NewLife.Log;
+using NewLife.Threading;
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -50,6 +52,26 @@ namespace SerialTest
             sp.PinChanged += Sp_PinChanged;
             sp.Open();
 
+            // Mono没有中断，事件不可用，需要定时刷
+            TimerX timer = null;
+            if (Runtime.Mono) timer = new TimerX(s => Sp_DataReceived(sp, null), null, 100, 100) { Async = true };
+
+            // 显示串口状态
+            Console.WriteLine();
+            foreach (var pi in sp.GetType().GetProperties())
+            {
+                Object val = null;
+                try
+                {
+                    val = pi.GetValue(sp, null);
+                }
+                catch (Exception ex)
+                {
+                    val = $"[{ex.GetTrue().Message}]";
+                }
+                Console.WriteLine("{0}:\t{1}", pi.Name, val);
+            }
+
             Console.WriteLine();
             Console.WriteLine("向串口{0}发送数据", sp.PortName);
             for (int i = 0; i < 10; i++)
@@ -66,6 +88,7 @@ namespace SerialTest
         private static void Sp_DataReceived(Object sender, SerialDataReceivedEventArgs e)
         {
             var sp = sender as SerialPort;
+            if (sp.BytesToRead == 0) return;
 
             var buf = new Byte[sp.BytesToRead];
             var count = sp.Read(buf, 0, buf.Length);
