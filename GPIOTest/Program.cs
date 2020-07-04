@@ -1,4 +1,5 @@
-﻿using NewLife.Log;
+﻿using NewLife.Data;
+using NewLife.Log;
 using System;
 using System.Device.Gpio;
 using System.Threading;
@@ -39,7 +40,16 @@ namespace GPIOTest
 
         static void TestInput(Int32 pin)
         {
+            using var gpio = new GpioController(PinNumberingScheme.Logical);
+            gpio.OpenPin(pin, PinMode.Input);
 
+            for (var i = 0; i < 20; i++)
+            {
+                var val = gpio.Read(pin);
+                XTrace.WriteLine("read {0}={1}", pin, val);
+
+                Thread.Sleep(500);
+            }
         }
     }
 }
