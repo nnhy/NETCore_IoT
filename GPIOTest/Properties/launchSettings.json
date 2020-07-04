@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GpioTest": {
+      "commandName": "Project",
+      "commandLineArgs": "-o 17"
+    }
+  }
+}

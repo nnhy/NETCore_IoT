@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoTTest", "IoTTest\IoTTest.csproj", "{437FFC88-7F37-4497-B896-C00A91308191}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialTest", "SerialTest\SerialTest.csproj", "{7B1334F3-B429-4DA6-A07B-EBB812937B8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialTest", "SerialTest\SerialTest.csproj", "{7B1334F3-B429-4DA6-A07B-EBB812937B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpioTest", "GPIOTest\GpioTest.csproj", "{AECA7E7C-D3BB-4B69-B264-0280B333A755}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,18 @@ Global
 		{7B1334F3-B429-4DA6-A07B-EBB812937B8E}.Release|ARM.Build.0 = Release|Any CPU
 		{7B1334F3-B429-4DA6-A07B-EBB812937B8E}.Release|ARM64.ActiveCfg = Release|Any CPU
 		{7B1334F3-B429-4DA6-A07B-EBB812937B8E}.Release|ARM64.Build.0 = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|ARM.Build.0 = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM.Build.0 = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
