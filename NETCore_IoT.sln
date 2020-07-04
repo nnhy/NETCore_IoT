@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialTest", "SerialTest\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpioTest", "GPIOTest\GpioTest.csproj", "{AECA7E7C-D3BB-4B69-B264-0280B333A755}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I2cTest", "I2cTest\I2cTest.csproj", "{3B24A0DD-D072-4304-BB87-1F362BB72E9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM.Build.0 = Release|Any CPU
 		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM64.ActiveCfg = Release|Any CPU
 		{AECA7E7C-D3BB-4B69-B264-0280B333A755}.Release|ARM64.Build.0 = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|ARM.Build.0 = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{3B24A0DD-D072-4304-BB87-1F362BB72E9B}.Release|ARM64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
