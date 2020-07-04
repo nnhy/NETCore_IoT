@@ -14,10 +14,15 @@ namespace GPIOTest
 
             if (args.Length >= 2)
             {
-                if (args[0] == "-o")
+                var mode = args[0]?.ToLower();
+                XTrace.WriteLine("Mode: {0}", mode);
+
+                if (mode == "-o")
                     TestOutput(args[1].ToInt());
-                else if (args[0] == "-i")
+                else if (mode == "-i")
                     TestInput(args[1].ToInt());
+                else if (mode == "-di")
+                    TestDI(args[1].ToInt());
             }
         }
 
@@ -50,6 +55,28 @@ namespace GPIOTest
 
                 Thread.Sleep(500);
             }
+        }
+
+        private static GpioController _gpio;
+        static void TestDI(Int32 pin)
+        {
+            using var gpio = new GpioController(PinNumberingScheme.Logical);
+            gpio.OpenPin(pin, PinMode.Input);
+
+            gpio.RegisterCallbackForPinValueChangedEvent(pin, PinEventTypes.Rising, OnChange);
+            gpio.RegisterCallbackForPinValueChangedEvent(pin, PinEventTypes.Falling, OnChange);
+
+            _gpio = gpio;
+
+            Thread.Sleep(30_000);
+        }
+
+        static void OnChange(Object sender, PinValueChangedEventArgs e)
+        {
+            //var gpio = sender as GpioController;
+            var gpio = _gpio;
+
+            XTrace.WriteLine("Event p{0}={1} {2}", e.PinNumber, gpio.Read(e.PinNumber), e.ChangeType);
         }
     }
 }
