@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpioTest", "GPIOTest\GpioTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "I2cTest", "I2cTest\I2cTest.csproj", "{3B24A0DD-D072-4304-BB87-1F362BB72E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwmTest", "PwmTest\PwmTest.csproj", "{5ED78112-8729-4587-B7F3-636FC9632C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PwmTest", "PwmTest\PwmTest.csproj", "{5ED78112-8729-4587-B7F3-636FC9632C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetTest", "NetTest\NetTest.csproj", "{995CD467-4894-4C25-A83C-25BFA09B39EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{5ED78112-8729-4587-B7F3-636FC9632C8E}.Release|ARM.Build.0 = Release|Any CPU
 		{5ED78112-8729-4587-B7F3-636FC9632C8E}.Release|ARM64.ActiveCfg = Release|Any CPU
 		{5ED78112-8729-4587-B7F3-636FC9632C8E}.Release|ARM64.Build.0 = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|ARM.Build.0 = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{995CD467-4894-4C25-A83C-25BFA09B39EB}.Release|ARM64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
