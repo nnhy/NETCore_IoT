@@ -1,5 +1,6 @@
 ﻿using NewLife;
 using NewLife.Log;
+using NewLife.Net;
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -15,6 +16,7 @@ namespace NetTest
 
             //TestUdp();
             TestTcp();
+            TestServer();
 
             Console.WriteLine("OK!");
             Console.ReadKey();
@@ -64,6 +66,19 @@ namespace NetTest
                     }
                 });
             }
+        }
+
+        private static NetServer _Server;
+        static void TestServer()
+        {
+            var server = new MyServer
+            {
+                Port = 2234,
+                Log = XTrace.Log
+            };
+            server.Start();
+
+            _Server = server;
         }
     }
 }
